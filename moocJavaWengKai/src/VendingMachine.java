@@ -1,5 +1,3 @@
-package vendingMechine;
-
 public class VendingMachine
 {
     int price=80;
