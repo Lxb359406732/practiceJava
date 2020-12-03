@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/algorithms/algorithms.iml" filepath="$PROJECT_DIR$/algorithms/algorithms.iml" />
       <module fileurl="file://$PROJECT_DIR$/coreJavaVolume/coreJavaVolume.iml" filepath="$PROJECT_DIR$/coreJavaVolume/coreJavaVolume.iml" />
       <module fileurl="file://$PROJECT_DIR$/moocJavaWengKai/moocJavaWengKai.iml" filepath="$PROJECT_DIR$/moocJavaWengKai/moocJavaWengKai.iml" />
       <module fileurl="file://$PROJECT_DIR$/practiceJava.iml" filepath="$PROJECT_DIR$/practiceJava.iml" />
