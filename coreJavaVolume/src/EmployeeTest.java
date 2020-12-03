@@ -5,7 +5,7 @@ public class EmployeeTest {
     public static void main(String[] args)
     {
         Employee[] staff=new Employee[3];
-        staff[0]=new Employee(null,9000,1999,1,1);
+        staff[0]=new Employee("",9000,1999,1,1);
         staff[1]=new Employee("little B",10000,1999,2,2);
         staff[2]=new Employee("little C",12000,1999,3,3);
 
