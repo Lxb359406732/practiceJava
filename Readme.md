@@ -1,6 +1,7 @@
 # Java从入门到入土
 ## 语法
 * for-each循环
+使用`Employee e`遍历`staff`数组
 ```java
 Employee[] staff=new Employee[3];
         staff[0]=new Employee("",9000,1999,1,1);
