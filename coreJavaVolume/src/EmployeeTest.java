@@ -1,4 +1,6 @@
+
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.Objects;
 
 /**
@@ -12,7 +14,7 @@ public class EmployeeTest {
         staff[1]=new Employee("little B",10000,1999,2,2);
         staff[2]=new Employee("little C",12000,1999,3,3);
         staff[3]=new Employee();
-
+        Arrays.sort(staff);
 //        for(Employee e:staff)
 //            e.raiseSalary(5);
         for(Employee e:staff)
@@ -23,7 +25,7 @@ public class EmployeeTest {
 
     }
 }
-class Employee
+class Employee implements Comparable<Employee>
 {
     private String name;
     private double salary;
@@ -66,6 +68,11 @@ class Employee
     public boolean equals(Employee other)
     {
         return name.equals(other.name);
+    }
+
+    public int compareTo(Employee other)
+    {
+        return Double.compare(salary,other.salary);
     }
 
 
