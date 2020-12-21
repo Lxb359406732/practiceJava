@@ -22,4 +22,11 @@ Employee[] staff=new Employee[3];
 宽容型：`Object.requireNonNulllElse()`  
 严格型：`Object.requireNonNull()`
 
-
+* 如何写出良好的代码(可扩展性，封装等)参考视频：[翁凯面向对象程序设计-城堡游戏](https://www.bilibili.com/video/BV1Mb411z7qx?p=32)
+ 相关代码：[castle](File://C:\Users\ZYY\Desktop\practiceJava\moocJavaWengKai\src\castle)
+      
+  
+## String StringBuffer StringBuilder
+简单来说，String值不可变，每次对String对象的改变都会生成新的String
+对象。效率低下，浪费内存。对于经常要改变的对象来说，使用StringBuffer和StringBuilder。
+具体见:[String、StringBuffer与StringBuilder之间区别](https://blog.csdn.net/itchuxuezhe_yang/article/details/89966303)
