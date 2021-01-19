@@ -29,6 +29,7 @@ public class FixedCapacityStackOfStrings
     {
         return a[--N];
     }
+
     public static void main(String[] args)
     {
         FixedCapacityStackOfStrings s;
