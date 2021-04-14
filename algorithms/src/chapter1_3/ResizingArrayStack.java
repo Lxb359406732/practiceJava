@@ -1,5 +1,8 @@
 package chapter1_3;
 
+import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.StdOut;
+
 import java.util.Iterator;
 
 public class ResizingArrayStack<Item> implements Iterable<Item>
@@ -12,11 +15,8 @@ public class ResizingArrayStack<Item> implements Iterable<Item>
     private void resize(int max)
     {
         Item[] temp = (Item[]) new Object[max];
-        for (int i=0;i<N;i++)
-        {
-            temp[i]=a[i];
-            a=temp;
-        }
+        for(int i=0;i<N;i++) {temp[i] = a[i];}
+        a=temp;
     }
     public void push(Item item)
     {
@@ -25,7 +25,7 @@ public class ResizingArrayStack<Item> implements Iterable<Item>
     }
     public Item pop()
     {
-        Item item=a[N--];
+        Item item=a[--N];
         a[N]=null;
         if(N==a.length/4) {resize(a.length/2);}
         return item;
@@ -37,5 +37,22 @@ public class ResizingArrayStack<Item> implements Iterable<Item>
         public boolean hasNext() {return i>0;}
         public Item next() {return a[--i];}
         public void remove() {}
+    }
+
+    public static void main(String[] args)
+    {
+        ResizingArrayStack<String> s = new ResizingArrayStack<>();
+        while (!StdIn.isEmpty())
+        {
+            String item=StdIn.readString();
+            if(!item.equals("-"))
+            {
+                s.push(item);
+            }
+            else if (!s.isEmpty())
+            {
+                StdOut.print(s.pop()+" ");
+            }
+        }
     }
 }
