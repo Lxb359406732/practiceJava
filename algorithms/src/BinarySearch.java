@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class BinarySearch
 {
-    public static int rank(int key,int[] a)
+    public static int rankIteration(int key,int[] a)
     {
         int lo=0;
         int hi=a.length-1;
@@ -19,6 +19,15 @@ public class BinarySearch
         }
         return -1;
     }
+    public static int rankRecursion(Integer key,int[] a,int lo,int hi)
+    {
+        if(hi<lo) {return -1;}
+        int mid=lo+(hi-lo)/2;
+        int cmp=key.compareTo(a[mid]);
+        if(cmp<0)      {return rankRecursion(key,a,lo,mid-1);}
+        else if(cmp>0) {return rankRecursion(key,a,mid+1,hi);}
+        else           {return mid;}
+    }
     public static void main(String[] args)
     {
         int[] whitelist = In.readInts(args[0]);
@@ -26,7 +35,7 @@ public class BinarySearch
         while(!StdIn.isEmpty())
         {
             int key=StdIn.readInt();
-            if(rank(key,whitelist)<0)
+            if(rankIteration(key,whitelist)<0)
                 StdOut.println(key);
         }
     }
