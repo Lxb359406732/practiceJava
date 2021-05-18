@@ -1,12 +1,14 @@
-import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.Alphabet;
 
-public class Test {
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
+class Test {
     public static void main(String[] args)
     {
-        String a="dsfsdf";
-
-        System.out.println(a.hashCode());
-
+        Alphabet alpha= Alphabet.LOWERCASE;
+        int a= alpha.toIndex('a');
+        System.out.println(a);
     }
 
 }
