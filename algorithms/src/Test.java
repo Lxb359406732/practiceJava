@@ -1,14 +1,22 @@
-import edu.princeton.cs.algs4.Alphabet;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
-class Test {
-    public static void main(String[] args)
-    {
-        Alphabet alpha= Alphabet.LOWERCASE;
-        int a= alpha.toIndex('a');
-        System.out.println(a);
+public class Test implements Comparable<String> {
+    public static void test() {
+        int i = 1;
+        addOne(i);
+        System.out.println("i="+i);
+    }
+    public static void addOne(int i) {
+        i++;
+        System.out.println("i="+i);
     }
 
+    public static void main(String[] args) {
+        test();
+    }
+
+    @Override
+    public int compareTo(String o) {
+        return 0;
+    }
 }
+

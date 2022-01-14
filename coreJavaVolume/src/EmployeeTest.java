@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Objects;
 
 /**
- *
+ * wabiwabi
  */
 public class EmployeeTest {
     public static void main(String[] args)
@@ -59,10 +59,16 @@ class Employee implements Comparable<Employee>
         return hireDay;
     }
 
-    public void raiseSalary(double byPercent)
+    /**
+     *
+     * @param byPercent the percent by which to raise the salary
+     * @return the amount of the raise
+     */
+    public double raiseSalary(double byPercent)
     {
         double raise=salary*byPercent/100;
         salary+=raise;
+        return raise;
     }
 
     public boolean equals(Employee other)
